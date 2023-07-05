@@ -1,7 +1,12 @@
-def t_area(ar, ar_unit):
-    tot_area = 0
-    if ar_unit == "h":
-        tot_area = ar
-    elif ar_unit == "a":
-        tot_area = ar * 0.4047
+import math
+
+
+def t_area(ar):
+    tot_area = float(ar) * float(0.4047)
     return tot_area
+
+
+def planting_calculation(tot_area, espace):
+    no_of_plants = math.ceil((tot_area * 10000) / espace ** 2)
+    return no_of_plants
+
